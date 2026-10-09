@@ -52,7 +52,7 @@
 -->
 
 
-<!-- v3.18 MAINTENANCE MAP
+<!-- v3.23 MAINTENANCE MAP
  D01 Cooking site and responsive public UI
  D02 Hidden authentication and painted 100% loading
  D03 Chat shell and viewport-resize stability
@@ -283,7 +283,7 @@
     body.chat-shell-open #chatShell{display:block!important;opacity:1!important;visibility:visible!important}
     body.chat-shell-open #chatFrame{opacity:1!important;transform:scale(1)!important}
 
-    /* C05.2 | v3.18 RESIZE-PROOF CHAT SHELL */
+    /* C05.2 | v3.23 RESIZE-PROOF CHAT SHELL */
     body.chat-shell-open{overflow:hidden!important}
     body.chat-shell-open #chatShell{display:block!important;position:fixed!important;inset:0!important;width:100dvw!important;height:100dvh!important;opacity:1!important;visibility:visible!important;z-index:99999!important}
     body.chat-shell-open #chatFrame{display:block!important;width:100%!important;height:100%!important;opacity:1!important;visibility:visible!important}
@@ -365,6 +365,22 @@
       header{position:static}.nav{top:0;max-height:100dvh}.hero{padding:12px 0}.hero-copy h1{font-size:28px}dialog>.modal,dialog.recipe-dialog>.modal{max-height:96dvh}
     }
 
+
+    /* C02.9 | COOKING TRIVIA CORNER (v3.21) */
+    .trivia-section{margin-top:34px;padding:25px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,#fffaf2,#f5eadb);box-shadow:var(--soft-shadow)}
+    .trivia-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:16px}.trivia-head h2{margin:4px 0 0;font:800 clamp(25px,3vw,36px) 'Yu Mincho',serif}.trivia-head p{max-width:580px;margin:0;color:var(--muted)}
+    .trivia-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.trivia-card{position:relative;min-width:0;padding:18px;border:1px solid #e6d7c7;border-radius:18px;background:#fff;overflow:hidden}.trivia-card::after{content:attr(data-icon);position:absolute;right:10px;bottom:-18px;color:#9d5a3820;font:800 78px/1 serif}.trivia-card h3{position:relative;margin:7px 0 8px;font-size:18px}.trivia-card p{position:relative;margin:0;color:#655c55;line-height:1.75}.trivia-tag{display:inline-flex;padding:4px 9px;color:#fff;font-size:11px;font-weight:900;background:var(--green);border-radius:99px}.trivia-source{position:relative;display:inline-block;margin-top:10px;color:var(--red);font-size:12px;font-weight:800;text-decoration:none}.trivia-source:hover{text-decoration:underline}
+    @media(max-width:900px){.trivia-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:600px){.trivia-section{margin-top:22px;padding:16px 12px;border-radius:18px}.trivia-head{display:block}.trivia-head p{margin-top:7px;font-size:13px}.trivia-grid{grid-template-columns:1fr}.trivia-card{padding:16px}.trivia-card p{font-size:14px}}
+
+
+    /* C02.10 | DESSERT SHOWCASE (v3.22) */
+    .dessert-section{margin:34px 0;padding:28px;border-radius:26px;background:radial-gradient(circle at 90% 10%,#fff7d8,transparent 28%),linear-gradient(145deg,#fff4f5,#f8eadf);border:1px solid #ecd4cf;box-shadow:var(--soft-shadow)}.dessert-head{display:flex;justify-content:space-between;align-items:end;gap:18px}.dessert-head h2{margin:5px 0;font:900 clamp(29px,4vw,43px) 'Yu Mincho',serif}.dessert-head p{max-width:580px;color:var(--muted)}.dessert-count{font-weight:900;color:var(--red)}.dessert-filters{display:flex;gap:8px;overflow-x:auto;padding:12px 0 16px;scrollbar-width:none}.dessert-filters::-webkit-scrollbar{display:none}.dessert-filter{flex:0 0 auto;min-height:42px;border:1px solid #dec8c0;padding:8px 13px;background:#fff;border-radius:99px;font-weight:900}.dessert-filter.active{color:#fff;background:var(--red);border-color:var(--red)}.dessert-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}.dessert-grid .recipe-card{height:100%}.dessert-more{display:flex;justify-content:center;margin-top:18px}.dessert-more .btn{min-width:230px}@media(max-width:1050px){.dessert-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:760px){.dessert-section{padding:20px 14px}.dessert-head{display:block}.dessert-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.dessert-section{margin-inline:-4px;padding:17px 10px;border-radius:20px}.dessert-grid{grid-template-columns:1fr}.dessert-head h2{font-size:30px}}
+
+    /* C02.11 | SEARCH RESULTS AND BALANCED RANKING FIX (v3.23) */
+    #ranking .g3{align-items:start}#ranking .rank-list{min-height:0;padding:16px}#ranking .rank-list h3{margin:0 0 9px;font-size:16px;color:var(--red)}#ranking .rank-row{min-height:64px;padding:9px 6px}#ranking .rank-row small{display:block;margin-top:3px;color:var(--muted);font-size:11px}#ranking .rank-no{width:32px;height:32px;font-size:14px}#ranking .icon-btn{width:auto;min-width:48px;height:38px;padding:0 10px;border-radius:10px}
+    #recipeGrid:empty::before{content:'レシピを読み込んでいます…';display:block;grid-column:1/-1;padding:30px;text-align:center;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:16px}
+    @media(max-width:700px){#ranking .g3{grid-template-columns:1fr}#ranking .rank-list{padding:12px}#ranking .rank-row{min-height:58px}}
 </style>
 </head>
 <body>
@@ -372,7 +388,7 @@
   <a class="skip-link" href="#recipes">レシピ検索へ移動</a>
   <div class="utility"><span>暮らしに寄り添う家庭料理メディア</span><span><a href="#notices">お知らせ</a>　<a href="#" data-info="faq">よくある質問</a></span></div>
   <header class="mast"><div class="mast-side"><b>今週の旬</b>きのこ・さつまいも・秋鮭</div><div class="brand"><h1>台所日和</h1><p>季節と暮らす、毎日の家庭料理</p></div><div class="mast-side"><b id="todayDate"></b>今日の献立を見つけよう</div></header>
-  <nav><div class="nav-inner"><a href="#top">ホーム</a><a href="#feature">季節の特集</a><a href="#ranking">人気ランキング</a><a href="#recipes">レシピ検索</a><a href="#columns">料理の基本</a><a href="#post">レシピ投稿</a></div></nav>
+  <nav><div class="nav-inner"><a href="#top">ホーム</a><a href="#feature">季節の特集</a><a href="#desserts">デザート特集</a><a href="#trivia">料理の豆知識</a><a href="#ranking">人気ランキング</a><a href="#recipes">レシピ検索</a><a href="#columns">料理の基本</a><a href="#post">レシピ投稿</a></div></nav>
   <!-- H02 | MAIN RECIPE MEDIA CONTENT -->
   <main id="top">
     <div class="hero" id="feature"><article class="hero-feature"><span class="kicker">季節の食卓 · 秋号</span><h2>湯気までごちそう。<br>秋を味わう、あったか献立。</h2><p>きのこ、根菜、秋鮭。身近な旬の食材で作れる、忙しい日にもやさしい家庭料理を編集部が選びました。</p><div class="hero-actions"><a class="btn light" href="#recipes" data-preset="秋">特集レシピを見る</a><button class="btn" id="randomRecipe" type="button">今日の献立を決める</button></div></article><aside class="side-stack"><div class="mini-feature"><span class="kicker">本日の一汁三菜</span><strong>鶏ときのこの炊き込みご飯</strong><small>調理時間45分・1人分 約520kcal</small><ul class="season-list"><li>かぼちゃの含め煮</li><li>小松菜のごま和え</li><li>豆腐とねぎのみそ汁</li></ul></div><div class="mini-feature"><span class="kicker">編集部メモ</span><strong>週末90分で、平日5日分の副菜</strong><small>冷蔵・冷凍の目安と、味を落とさない保存方法を紹介。</small></div></aside></div>
@@ -385,13 +401,27 @@
     <section id="notices"><div class="section-head"><h2 class="section-title"><span>INFORMATION</span>編集部からのお知らせ</h2></div><div class="card notice-list"><div class="notice-row"><time>2026.09.25</time><span class="notice-tag">更新情報</span><span>秋のあったか献立特集を公開しました。</span></div><div class="notice-row"><time>2026.09.18</time><span class="notice-tag">レシピ</span><span>15分以内で作れる副菜を12品追加しました。</span></div><div class="notice-row"><time>2026.09.01</time><span class="notice-tag">お知らせ</span><span>サイト内検索とお気に入り機能を改善しました。</span></div></div></section>
     <section id="post"><div class="member-box"><div><h2>あなたの家庭の味を投稿しませんか</h2><p>料理名、材料、作り方を登録すると、この端末の「投稿レシピ」に保存されます。</p></div><button class="btn light" id="openPost" type="button">レシピを投稿する</button></div></section>
     <section><div class="member-box" style="background:linear-gradient(135deg,#75402e,#ad6347)"><div><h2>台所日和だより</h2><p>旬の献立、新着レシピ、季節の料理特集を週1回お届けします。</p></div><form class="member-form" id="newsletter"><input type="email" required placeholder="メールアドレス"><button class="btn light">無料で登録</button></form></div></section>
+
+
+    <section class="dessert-section" id="desserts" aria-labelledby="dessertTitle"><div class="dessert-head"><div><span class="kicker">甘い時間を、もっと豊かに</span><h2 id="dessertTitle">最強デザートコーナー</h2></div><p><span class="dessert-count" id="dessertCount"></span>。焼き菓子、冷たいデザート、和菓子、世界の甘味まで揃えました。</p></div><div class="dessert-filters" id="dessertFilters" aria-label="デザート分類"></div><div class="dessert-grid" id="dessertGrid"></div><div class="dessert-more"><button class="btn" id="showAllDesserts" type="button">デザートをすべて見る</button></div></section>
+    <section class="trivia-section" id="trivia" aria-labelledby="triviaTitle">
+      <div class="trivia-head"><div><span class="kicker">知ると料理がもっと楽しい</span><h2 id="triviaTitle">料理の豆知識</h2></div><p>買い物、下ごしらえ、加熱、保存で役立つ短い知識をまとめました。</p></div>
+      <div class="trivia-grid">
+        <article class="trivia-card" data-icon="旬"><span class="trivia-tag">旬</span><h3>旬の食材は献立の味方</h3><p>旬の時期に多く出回る食材は、比較的安価で栄養価も高いと農林水産省が案内しています。季節の野菜や魚から献立を決める方法もおすすめです。</p><a class="trivia-source" href="https://www.maff.go.jp/j/syokuiku/minna_navi/recipe/season.html" target="_blank" rel="noopener">農林水産省の情報を見る</a></article>
+        <article class="trivia-card" data-icon="温"><span class="trivia-tag">安全</span><h3>肉は中心温度で確認</h3><p>肉料理は、見た目だけでなく中心部75℃で1分間の加熱が基本です。食品用温度計は最も厚い部分へ刺して確認します。</p><a class="trivia-source" href="https://www.mhlw.go.jp/content/11130500/000365043.pdf" target="_blank" rel="noopener">厚生労働省の資料を見る</a></article>
+        <article class="trivia-card" data-icon="冷"><span class="trivia-tag">保存</span><h3>残り物は浅い容器へ</h3><p>調理済み食品は浅い容器へ小分けすると、冷めるまでの時間を短くできます。粗熱をできるだけ早く取り、速やかに冷蔵または冷凍します。</p><a class="trivia-source" href="https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/frige.html" target="_blank" rel="noopener">農林水産省の保存情報を見る</a></article>
+        <article class="trivia-card" data-icon="洗"><span class="trivia-tag">衛生</span><h3>生肉用の器具は分ける</h3><p>生肉や魚の汁を、サラダなど生で食べるものへ付けないことが大切です。包丁やまな板は用途別に分けるか、使用後によく洗浄します。</p><a class="trivia-source" href="https://www.gov-online.go.jp/article/20110602/entry-8196.html" target="_blank" rel="noopener">政府広報の予防ポイントを見る</a></article>
+        <article class="trivia-card" data-icon="大"><span class="trivia-tag">野菜</span><h3>大根は部位で使い分け</h3><p>葉に近い部分は辛味が少なくサラダ向き、中央は煮物向き、先端は辛味を生かして薬味や漬物に使えます。</p><a class="trivia-source" href="https://life.ja-group.jp/food/shun/detail?id=4" target="_blank" rel="noopener">JAグループの食材情報を見る</a></article>
+        <article class="trivia-card" data-icon="郷"><span class="trivia-tag">食文化</span><h3>郷土料理には地域の背景がある</h3><p>郷土料理は、地域の食材や風土、行事と結び付いて受け継がれています。料理名だけでなく、生まれた地域の背景も調べると理解が深まります。</p><a class="trivia-source" href="https://www.maff.go.jp/j/keikaku/syokubunka/k_ryouri/index.html" target="_blank" rel="noopener">農林水産省の郷土料理を見る</a></article>
+      </div>
+    </section>
   </main>
   <!-- H03 | FOOTER AND PUBLIC INFORMATION -->
   <footer><div class="footer-inner"><div><h3>台所日和</h3><p>季節の食材と、無理なく続けられる家庭料理を紹介するレシピメディアです。</p></div><div><h3>レシピ</h3><a href="#recipes">新着レシピ</a><a href="#ranking">人気ランキング</a><a href="#feature">季節の特集</a><a href="#post">レシピ投稿</a></div><div><h3>サイト情報</h3><a href="#" data-info="about">運営情報</a><a href="#" data-info="faq">よくある質問</a><a href="#" data-info="contact">お問い合わせ</a><a href="#" data-info="sitemap">サイトマップ</a></div><div><h3>ポリシー</h3><a href="#" data-info="terms">利用規約</a><a href="#" data-info="privacy">プライバシー</a><a href="#" data-info="cookies">Cookie設定</a></div></div><div class="copyright">© 2026 台所日和編集部　<span class="site-note">家庭料理レシピメディア</span></div><div><!--shinobi1--><script src="//xa.shinobi.jp/ufo/192359900"></script><noscript><a href="//xa.shinobi.jp/bin/gg?192359900"><img src="//xa.shinobi.jp/bin/ll?192359900" alt="アクセス解析"></a></noscript><!--shinobi2--></div></footer>
   <!-- H04 | DIALOGS AND UTILITY OVERLAYS -->
   <dialog id="detailDialog" class="recipe-dialog"><div class="modal" id="detailBody"></div><div class="dialog-close-hint">外側をタップすると閉じます</div></dialog><dialog id="infoDialog"><div class="modal"><div class="modal-head"><h2 id="infoTitle"></h2><button class="close-x" type="button" data-close aria-label="閉じる">×</button></div><div class="legal" id="infoBody"></div></div></dialog><dialog id="postDialog"><div class="modal"><div class="modal-head"><h2>レシピを投稿</h2><button class="close-x" type="button" data-close aria-label="閉じる">×</button></div><form id="postForm"><label>料理名<input class="field" id="postTitle" required maxlength="40"></label><label>材料<textarea class="field" id="postIngredients" required rows="4" placeholder="1行に1つずつ入力"></textarea></label><label>作り方<textarea class="field" id="postSteps" required rows="5" placeholder="1行に1手順ずつ入力"></textarea></label><button class="btn">端末内に保存</button><p id="postMessage"></p></form></div></dialog><dialog id="gate"><div class="modal"><div class="modal-head"><h2>認証</h2><button class="close-x" type="button" data-close aria-label="閉じる">×</button></div><p>4桁の認証コードを入力してください。</p><form id="gateForm"><input class="field" id="pw" type="password" required inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="current-password"><p id="gateError" style="color:#b42318"></p><button class="btn">続ける</button></form></div></dialog>
   <div id="cookieBar"><span>台所日和では、設定保存と利用状況の把握にブラウザ保存・アクセス解析を利用します。</span><div class="cookie-actions"><button class="btn ghost" id="cookieSettings">設定</button><button class="btn" id="cookieAccept">同意する</button></div></div>
-    <div class="site-version" aria-label="サイトバージョン">v3.18</div>
+    <div class="site-version" aria-label="サイトバージョン">v3.23</div>
     <button id="toTop" type="button" aria-label="ページ上部へ戻る">↑</button>
 
 <script>
@@ -919,6 +949,106 @@
       });
     }
     classifyDessertRecipes();
+    /* J03.9 | CURATED WORLD RECIPE DIVERSITY (v3.19) */
+    function rebuildGeneratedRecipesWithDiversity(){
+      const families=[{"country":"トルコ料理","season":"オリーブ油・レモン","name":"メネメン","cat":"主菜","main":"卵","sub":"トマト"},{"country":"トルコ料理","season":"オリーブ油・レモン","name":"メルジメッキ・チョルバス","cat":"スープ","main":"赤レンズ豆","sub":"玉ねぎ"},{"country":"トルコ料理","season":"オリーブ油・レモン","name":"ムジュヴェル","cat":"副菜","main":"ズッキーニ","sub":"卵"},{"country":"トルコ料理","season":"オリーブ油・レモン","name":"キスル","cat":"副菜","main":"ブルグル","sub":"トマト"},{"country":"トルコ料理","season":"オリーブ油・レモン","name":"イズミル・キョフテ","cat":"主菜","main":"合いびき肉","sub":"じゃがいも"},{"country":"トルコ料理","season":"オリーブ油・レモン","name":"ラフマジュン","cat":"パン・麺","main":"強力粉","sub":"合いびき肉"},{"country":"トルコ料理","season":"オリーブ油・レモン","name":"イマム・バユルドゥ","cat":"主菜","main":"なす","sub":"玉ねぎ"},{"country":"トルコ料理","season":"オリーブ油・レモン","name":"ストラッチ","cat":"デザート","main":"米","sub":"牛乳"},{"country":"ギリシャ料理","season":"オリーブ油・オレガノ","name":"ムサカ","cat":"主菜","main":"なす","sub":"合いびき肉"},{"country":"ギリシャ料理","season":"オリーブ油・オレガノ","name":"スパナコピタ","cat":"パン・麺","main":"ほうれん草","sub":"パイシート"},{"country":"ギリシャ料理","season":"オリーブ油・オレガノ","name":"ファソラーダ","cat":"スープ","main":"白いんげん豆","sub":"トマト"},{"country":"ギリシャ料理","season":"オリーブ油・オレガノ","name":"ギリシャ風レモンチキン","cat":"主菜","main":"鶏もも肉","sub":"レモン"},{"country":"ギリシャ料理","season":"オリーブ油・オレガノ","name":"ホリアティキサラダ","cat":"副菜","main":"トマト","sub":"きゅうり"},{"country":"ギリシャ料理","season":"オリーブ油・オレガノ","name":"ギガンテス・プラキ","cat":"副菜","main":"白いんげん豆","sub":"トマト"},{"country":"ギリシャ料理","season":"オリーブ油・オレガノ","name":"スブラキ","cat":"主菜","main":"豚肉","sub":"玉ねぎ"},{"country":"ギリシャ料理","season":"オリーブ油・オレガノ","name":"ヨーグルトのはちみつナッツ","cat":"デザート","main":"ヨーグルト","sub":"はちみつ"},{"country":"イタリア料理","season":"オリーブ油・にんにく","name":"アマトリチャーナ","cat":"パン・麺","main":"スパゲッティ","sub":"ベーコン"},{"country":"イタリア料理","season":"オリーブ油・にんにく","name":"ミネストローネ","cat":"スープ","main":"ミックスビーンズ","sub":"トマト"},{"country":"イタリア料理","season":"オリーブ油・にんにく","name":"鶏肉のカチャトーラ","cat":"主菜","main":"鶏もも肉","sub":"トマト"},{"country":"イタリア料理","season":"オリーブ油・にんにく","name":"なすのパルミジャーナ","cat":"主菜","main":"なす","sub":"チーズ"},{"country":"イタリア料理","season":"オリーブ油・にんにく","name":"きのこのリゾット","cat":"主食","main":"米","sub":"きのこ"},{"country":"イタリア料理","season":"オリーブ油・にんにく","name":"カプレーゼ","cat":"副菜","main":"トマト","sub":"モッツァレラ"},{"country":"イタリア料理","season":"オリーブ油・にんにく","name":"ニョッキのトマトソース","cat":"パン・麺","main":"じゃがいも","sub":"薄力粉"},{"country":"イタリア料理","season":"オリーブ油・にんにく","name":"パンナコッタ","cat":"デザート","main":"生クリーム","sub":"牛乳"},{"country":"フランス料理","season":"バター・ハーブ","name":"ラタトゥイユ","cat":"副菜","main":"なす","sub":"ズッキーニ"},{"country":"フランス料理","season":"バター・ハーブ","name":"キッシュ・ロレーヌ","cat":"主菜","main":"卵","sub":"ベーコン"},{"country":"フランス料理","season":"バター・ハーブ","name":"ポトフ","cat":"スープ","main":"牛肉","sub":"キャベツ"},{"country":"フランス料理","season":"バター・ハーブ","name":"鶏肉のフリカッセ","cat":"主菜","main":"鶏もも肉","sub":"きのこ"},{"country":"フランス料理","season":"バター・ハーブ","name":"オニオングラタンスープ","cat":"スープ","main":"玉ねぎ","sub":"バゲット"},{"country":"フランス料理","season":"バター・ハーブ","name":"クロックムッシュ","cat":"パン・麺","main":"食パン","sub":"ハム"},{"country":"フランス料理","season":"バター・ハーブ","name":"白身魚のムニエル","cat":"主菜","main":"白身魚","sub":"バター"},{"country":"フランス料理","season":"バター・ハーブ","name":"クレームブリュレ","cat":"デザート","main":"生クリーム","sub":"卵黄"},{"country":"スペイン料理","season":"オリーブ油・パプリカ","name":"トルティージャ","cat":"主菜","main":"卵","sub":"じゃがいも"},{"country":"スペイン料理","season":"オリーブ油・パプリカ","name":"魚介のパエリア","cat":"主食","main":"米","sub":"えび"},{"country":"スペイン料理","season":"オリーブ油・パプリカ","name":"ガスパチョ","cat":"スープ","main":"トマト","sub":"きゅうり"},{"country":"スペイン料理","season":"オリーブ油・パプリカ","name":"えびのアヒージョ","cat":"主菜","main":"えび","sub":"にんにく"},{"country":"スペイン料理","season":"オリーブ油・パプリカ","name":"アルボンディガス","cat":"主菜","main":"合いびき肉","sub":"トマト"},{"country":"スペイン料理","season":"オリーブ油・パプリカ","name":"ピスト","cat":"副菜","main":"なす","sub":"パプリカ"},{"country":"スペイン料理","season":"オリーブ油・パプリカ","name":"鶏肉のチリンドロン","cat":"主菜","main":"鶏もも肉","sub":"パプリカ"},{"country":"スペイン料理","season":"オリーブ油・パプリカ","name":"フラン","cat":"デザート","main":"卵","sub":"牛乳"},{"country":"インド料理","season":"クミン・コリアンダー","name":"バターチキン","cat":"主菜","main":"鶏もも肉","sub":"トマト"},{"country":"インド料理","season":"クミン・コリアンダー","name":"チャナマサラ","cat":"主菜","main":"ひよこ豆","sub":"トマト"},{"country":"インド料理","season":"クミン・コリアンダー","name":"ダール","cat":"スープ","main":"赤レンズ豆","sub":"玉ねぎ"},{"country":"インド料理","season":"クミン・コリアンダー","name":"アルゴビ","cat":"副菜","main":"じゃがいも","sub":"カリフラワー"},{"country":"インド料理","season":"クミン・コリアンダー","name":"キーマカレー","cat":"主菜","main":"合いびき肉","sub":"玉ねぎ"},{"country":"インド料理","season":"クミン・コリアンダー","name":"野菜ビリヤニ","cat":"主食","main":"米","sub":"ミックス野菜"},{"country":"インド料理","season":"クミン・コリアンダー","name":"パラクパニール風","cat":"主菜","main":"ほうれん草","sub":"厚揚げ"},{"country":"インド料理","season":"クミン・コリアンダー","name":"マンゴーラッシープリン","cat":"デザート","main":"マンゴー","sub":"ヨーグルト"},{"country":"タイ料理","season":"ナンプラー・ライム","name":"ガパオライス","cat":"主食","main":"鶏ひき肉","sub":"バジル"},{"country":"タイ料理","season":"ナンプラー・ライム","name":"カオマンガイ","cat":"主食","main":"鶏もも肉","sub":"米"},{"country":"タイ料理","season":"ナンプラー・ライム","name":"トムヤムクン","cat":"スープ","main":"えび","sub":"きのこ"},{"country":"タイ料理","season":"ナンプラー・ライム","name":"パッタイ","cat":"パン・麺","main":"米麺","sub":"えび"},{"country":"タイ料理","season":"ナンプラー・ライム","name":"グリーンカレー","cat":"主菜","main":"鶏もも肉","sub":"なす"},{"country":"タイ料理","season":"ナンプラー・ライム","name":"ヤムウンセン","cat":"副菜","main":"春雨","sub":"えび"},{"country":"タイ料理","season":"ナンプラー・ライム","name":"ガイヤーン","cat":"主菜","main":"鶏もも肉","sub":"にんにく"},{"country":"タイ料理","season":"ナンプラー・ライム","name":"マンゴーココナッツもち米","cat":"デザート","main":"もち米","sub":"マンゴー"},{"country":"ベトナム料理","season":"ヌクマム・レモン","name":"鶏肉のフォー","cat":"パン・麺","main":"米麺","sub":"鶏むね肉"},{"country":"ベトナム料理","season":"ヌクマム・レモン","name":"バインセオ","cat":"主菜","main":"米粉","sub":"豚肉"},{"country":"ベトナム料理","season":"ヌクマム・レモン","name":"ブンチャー","cat":"パン・麺","main":"米麺","sub":"豚ひき肉"},{"country":"ベトナム料理","season":"ヌクマム・レモン","name":"レモングラスチキン","cat":"主菜","main":"鶏もも肉","sub":"レモングラス"},{"country":"ベトナム料理","season":"ヌクマム・レモン","name":"生春巻き","cat":"副菜","main":"ライスペーパー","sub":"えび"},{"country":"ベトナム料理","season":"ヌクマム・レモン","name":"カインチュア風スープ","cat":"スープ","main":"白身魚","sub":"トマト"},{"country":"ベトナム料理","season":"ヌクマム・レモン","name":"ベトナム風なます","cat":"副菜","main":"大根","sub":"にんじん"},{"country":"ベトナム料理","season":"ヌクマム・レモン","name":"チェー風ココナッツぜんざい","cat":"デザート","main":"小豆","sub":"ココナッツミルク"},{"country":"韓国料理","season":"ごま油・コチュジャン","name":"ビビンバ","cat":"主食","main":"ご飯","sub":"牛肉"},{"country":"韓国料理","season":"ごま油・コチュジャン","name":"チャプチェ","cat":"副菜","main":"春雨","sub":"牛肉"},{"country":"韓国料理","season":"ごま油・コチュジャン","name":"スンドゥブチゲ","cat":"スープ","main":"豆腐","sub":"あさり"},{"country":"韓国料理","season":"ごま油・コチュジャン","name":"タッカルビ","cat":"主菜","main":"鶏もも肉","sub":"キャベツ"},{"country":"韓国料理","season":"ごま油・コチュジャン","name":"海鮮チヂミ","cat":"主菜","main":"薄力粉","sub":"シーフードミックス"},{"country":"韓国料理","season":"ごま油・コチュジャン","name":"プルコギ","cat":"主菜","main":"牛肉","sub":"玉ねぎ"},{"country":"韓国料理","season":"ごま油・コチュジャン","name":"わかめスープ","cat":"スープ","main":"わかめ","sub":"牛肉"},{"country":"韓国料理","season":"ごま油・コチュジャン","name":"ホットク","cat":"デザート","main":"強力粉","sub":"黒砂糖"},{"country":"中国料理","season":"しょうゆ・紹興酒風","name":"麻婆豆腐","cat":"主菜","main":"木綿豆腐","sub":"豚ひき肉"},{"country":"中国料理","season":"しょうゆ・紹興酒風","name":"青椒肉絲","cat":"主菜","main":"牛肉","sub":"ピーマン"},{"country":"中国料理","season":"しょうゆ・紹興酒風","name":"油淋鶏","cat":"主菜","main":"鶏もも肉","sub":"長ねぎ"},{"country":"中国料理","season":"しょうゆ・紹興酒風","name":"八宝菜","cat":"主菜","main":"豚肉","sub":"白菜"},{"country":"中国料理","season":"しょうゆ・紹興酒風","name":"酸辣湯","cat":"スープ","main":"豆腐","sub":"たけのこ"},{"country":"中国料理","season":"しょうゆ・紹興酒風","name":"天津飯","cat":"主食","main":"卵","sub":"ご飯"},{"country":"中国料理","season":"しょうゆ・紹興酒風","name":"担々麺","cat":"パン・麺","main":"中華麺","sub":"豚ひき肉"},{"country":"中国料理","season":"しょうゆ・紹興酒風","name":"杏仁豆腐","cat":"デザート","main":"牛乳","sub":"寒天"},{"country":"メキシコ料理","season":"チリ・ライム","name":"タコス","cat":"主食","main":"トルティーヤ","sub":"牛ひき肉"},{"country":"メキシコ料理","season":"チリ・ライム","name":"チリコンカン","cat":"主菜","main":"合いびき肉","sub":"ミックスビーンズ"},{"country":"メキシコ料理","season":"チリ・ライム","name":"ケサディーヤ","cat":"パン・麺","main":"トルティーヤ","sub":"チーズ"},{"country":"メキシコ料理","season":"チリ・ライム","name":"エンチラーダ","cat":"主菜","main":"トルティーヤ","sub":"鶏むね肉"},{"country":"メキシコ料理","season":"チリ・ライム","name":"ワカモレ","cat":"副菜","main":"アボカド","sub":"トマト"},{"country":"メキシコ料理","season":"チリ・ライム","name":"トルティーヤスープ","cat":"スープ","main":"トマト","sub":"鶏むね肉"},{"country":"メキシコ料理","season":"チリ・ライム","name":"メキシカンライス","cat":"主食","main":"米","sub":"トマト"},{"country":"メキシコ料理","season":"チリ・ライム","name":"アロス・コン・レチェ","cat":"デザート","main":"米","sub":"牛乳"},{"country":"中東料理","season":"クミン・レモン","name":"フムス","cat":"副菜","main":"ひよこ豆","sub":"練りごま"},{"country":"中東料理","season":"クミン・レモン","name":"ファラフェル","cat":"主菜","main":"ひよこ豆","sub":"玉ねぎ"},{"country":"中東料理","season":"クミン・レモン","name":"シャクシュカ","cat":"主菜","main":"卵","sub":"トマト"},{"country":"中東料理","season":"クミン・レモン","name":"タブレ","cat":"副菜","main":"ブルグル","sub":"パセリ"},{"country":"中東料理","season":"クミン・レモン","name":"レンズ豆スープ","cat":"スープ","main":"赤レンズ豆","sub":"玉ねぎ"},{"country":"中東料理","season":"クミン・レモン","name":"チキンシャワルマ風","cat":"主菜","main":"鶏もも肉","sub":"ヨーグルト"},{"country":"中東料理","season":"クミン・レモン","name":"マクルーバ風炊き込みご飯","cat":"主食","main":"米","sub":"鶏もも肉"},{"country":"中東料理","season":"クミン・レモン","name":"バクラヴァ","cat":"デザート","main":"パイシート","sub":"くるみ"},{"country":"モロッコ料理","season":"クミン・シナモン","name":"鶏肉のレモンタジン","cat":"主菜","main":"鶏もも肉","sub":"レモン"},{"country":"モロッコ料理","season":"クミン・シナモン","name":"野菜クスクス","cat":"主食","main":"クスクス","sub":"ひよこ豆"},{"country":"モロッコ料理","season":"クミン・シナモン","name":"ハリラスープ","cat":"スープ","main":"ひよこ豆","sub":"トマト"},{"country":"モロッコ料理","season":"クミン・シナモン","name":"ケフタタジン","cat":"主菜","main":"合いびき肉","sub":"トマト"},{"country":"モロッコ料理","season":"クミン・シナモン","name":"ザアルーク","cat":"副菜","main":"なす","sub":"トマト"},{"country":"モロッコ料理","season":"クミン・シナモン","name":"にんじんのモロッコサラダ","cat":"副菜","main":"にんじん","sub":"レモン"},{"country":"モロッコ料理","season":"クミン・シナモン","name":"シーフードタジン","cat":"主菜","main":"白身魚","sub":"えび"},{"country":"モロッコ料理","season":"クミン・シナモン","name":"オレンジのシナモンマリネ","cat":"デザート","main":"オレンジ","sub":"シナモン"},{"country":"ブラジル料理","season":"にんにく・ライム","name":"フェイジョアーダ風煮込み","cat":"主菜","main":"黒豆","sub":"豚肉"},{"country":"ブラジル料理","season":"にんにく・ライム","name":"ムケッカ","cat":"主菜","main":"白身魚","sub":"ココナッツミルク"},{"country":"ブラジル料理","season":"にんにく・ライム","name":"ガリニャーダ","cat":"主食","main":"米","sub":"鶏もも肉"},{"country":"ブラジル料理","season":"にんにく・ライム","name":"パステウ風揚げ焼き","cat":"パン・麺","main":"春巻きの皮","sub":"合いびき肉"},{"country":"ブラジル料理","season":"にんにく・ライム","name":"ヴィナグレッチ","cat":"副菜","main":"トマト","sub":"玉ねぎ"},{"country":"ブラジル料理","season":"にんにく・ライム","name":"豆と野菜のスープ","cat":"スープ","main":"黒豆","sub":"にんじん"},{"country":"ブラジル料理","season":"にんにく・ライム","name":"ポンデケージョ","cat":"パン・麺","main":"白玉粉","sub":"チーズ"},{"country":"ブラジル料理","season":"にんにく・ライム","name":"ブリガデイロ","cat":"デザート","main":"練乳","sub":"ココア"},{"country":"ペルー料理","season":"ライム・クミン","name":"ロモ・サルタード","cat":"主菜","main":"牛肉","sub":"トマト"},{"country":"ペルー料理","season":"ライム・クミン","name":"アヒ・デ・ガジーナ風","cat":"主菜","main":"鶏むね肉","sub":"牛乳"},{"country":"ペルー料理","season":"ライム・クミン","name":"カウサ風ポテトサラダ","cat":"副菜","main":"じゃがいも","sub":"ツナ"},{"country":"ペルー料理","season":"ライム・クミン","name":"ペルー風チキンスープ","cat":"スープ","main":"鶏もも肉","sub":"じゃがいも"},{"country":"ペルー料理","season":"ライム・クミン","name":"タクタク風豆ご飯","cat":"主食","main":"ご飯","sub":"ミックスビーンズ"},{"country":"ペルー料理","season":"ライム・クミン","name":"白身魚のセビーチェ風","cat":"副菜","main":"白身魚","sub":"ライム"},{"country":"ペルー料理","season":"ライム・クミン","name":"キヌアと野菜の煮込み","cat":"主菜","main":"キヌア","sub":"トマト"},{"country":"ペルー料理","season":"ライム・クミン","name":"紫とうもろこし風ゼリー","cat":"デザート","main":"ぶどうジュース","sub":"寒天"},{"country":"ドイツ料理","season":"マスタード・バター","name":"ジャーマンポテト","cat":"副菜","main":"じゃがいも","sub":"ベーコン"},{"country":"ドイツ料理","season":"マスタード・バター","name":"シュニッツェル","cat":"主菜","main":"豚肉","sub":"パン粉"},{"country":"ドイツ料理","season":"マスタード・バター","name":"グーラッシュ風煮込み","cat":"主菜","main":"牛肉","sub":"玉ねぎ"},{"country":"ドイツ料理","season":"マスタード・バター","name":"ザワークラウトスープ","cat":"スープ","main":"キャベツ","sub":"ソーセージ"},{"country":"ドイツ料理","season":"マスタード・バター","name":"フリカデレ","cat":"主菜","main":"合いびき肉","sub":"玉ねぎ"},{"country":"ドイツ料理","season":"マスタード・バター","name":"ケーゼシュペッツレ風","cat":"パン・麺","main":"ショートパスタ","sub":"チーズ"},{"country":"ドイツ料理","season":"マスタード・バター","name":"ソーセージとレンズ豆","cat":"主菜","main":"ソーセージ","sub":"レンズ豆"},{"country":"ドイツ料理","season":"マスタード・バター","name":"りんごのクランブル","cat":"デザート","main":"りんご","sub":"薄力粉"},{"country":"日本料理","season":"だし・しょうゆ","name":"親子丼","cat":"主食","main":"鶏もも肉","sub":"卵"},{"country":"日本料理","season":"だし・しょうゆ","name":"筑前煮","cat":"主菜","main":"鶏もも肉","sub":"れんこん"},{"country":"日本料理","season":"だし・しょうゆ","name":"豚汁","cat":"スープ","main":"豚肉","sub":"大根"},{"country":"日本料理","season":"だし・しょうゆ","name":"鮭の南蛮漬け","cat":"主菜","main":"生鮭","sub":"玉ねぎ"},{"country":"日本料理","season":"だし・しょうゆ","name":"ひじきの煮物","cat":"副菜","main":"ひじき","sub":"にんじん"},{"country":"日本料理","season":"だし・しょうゆ","name":"きつねうどん","cat":"パン・麺","main":"うどん","sub":"油揚げ"},{"country":"日本料理","season":"だし・しょうゆ","name":"だし巻き卵","cat":"副菜","main":"卵","sub":"だし"},{"country":"日本料理","season":"だし・しょうゆ","name":"抹茶ミルクプリン","cat":"デザート","main":"牛乳","sub":"抹茶"}];
+      const generated=recipes.filter(r=>String(r.id).startsWith('extra-'));
+      const iconByCategory={'主食':'飯','主菜':'肉','副菜':'菜','スープ':'汁','パン・麺':'麺','デザート':'甘'};
+      const timeByCategory={'主食':35,'主菜':30,'副菜':20,'スープ':35,'パン・麺':40,'デザート':45};
+      const stepsFor=(d,variant)=>{
+        const prep=`${d.main}と${d.sub}を料理に合う大きさに切り、調味料を計量する。`;
+        if(d.cat==='デザート')return [prep,`${d.main}と${d.sub}を合わせ、だまが残らないよう混ぜる。`,`弱火または指定温度のオーブンで、中心まで均一に火が入るよう加熱する。`,`粗熱を取り、必要に応じて冷蔵庫で冷やして仕上げる。`];
+        if(d.cat==='スープ')return [prep,`鍋で香味野菜を中火で3分炒め、${d.main}と${d.sub}を加える。`,`水またはだしを加え、沸騰後は弱火で15〜20分煮る。`,`材料がやわらかくなったら、${d.season}を基調に味を整える。`];
+        if(d.cat==='パン・麺')return [prep,`生地または麺を表示・レシピの基準どおり準備する。`,`フライパンまたは鍋で${d.main}と${d.sub}を中火で加熱する。`,`麺または生地と具を合わせ、${d.season}で仕上げる。`];
+        if(d.cat==='副菜')return [prep,`${d.main}と${d.sub}を、食感が残るよう中火で3〜6分加熱する。`,`${d.season}を基調にした調味料を加え、全体へ均一になじませる。`,`温かいまま、または粗熱を取って盛り付ける。`];
+        return [prep,`鍋またはフライパンを中火で温め、${d.main}から加熱する。`,`${d.sub}を加え、焦げないよう火加減を調整して8〜15分加熱する。`,`${d.season}を基調に味を整え、中心まで十分加熱されたことを確認する。`];
+      };
+      generated.forEach((r,i)=>{
+        const d=families[i%families.length],variant=Math.floor(i/families.length);
+        const suffix=variant===0?'':' 家庭向け';
+        r.title=d.name+suffix;r.genre=d.country;r.category=d.cat;r.icon=iconByCategory[d.cat];
+        r.badge=variant===0?d.country:'作りやすい家庭版';r.time=timeByCategory[d.cat]+(i%3)*5;
+        r.level=d.cat==='副菜'||d.cat==='スープ'?'かんたん':(i%4===0?'しっかり':'ふつう');
+        r.budget=180+(i%7)*70+(d.cat==='主菜'?120:0);r.kcal=180+(i%8)*55;
+        r.materials=[d.main,d.sub];r.ingredients=[`${d.main} 2人分`,`${d.sub} 2人分`,`${d.season} 適量`];
+        r.steps=stepsFor(d,variant);r.tip=`${d.name}の特徴を残しつつ、家庭で手に入りやすい材料量に調整しています。`;
+        r.desc=`${d.country}の${d.name}。${d.main}と${d.sub}を中心に、${d.season}の風味で仕上げます。`;
+        r.tags=[d.country,d.cat,variant===0?'世界の料理':'家庭版'];
+        r.validation={...r.validation,curatedFamily:d.name,variant,diversityAudit:true,reviewed:'2026-10-09'};
+      });
+    }
+    rebuildGeneratedRecipesWithDiversity();
+    /* J03.10 | POST-REBUILD DUPLICATE / INGREDIENT / PROCEDURE AUDIT (v3.20) */
+    function auditWorldRecipesAfterRebuild(){
+      const animal=/鶏|豚|牛|ひき肉|合いびき|魚|鮭|さば|えび|あさり|シーフード|卵/;
+      const rawAnimal=/鶏|豚|牛|ひき肉|合いびき|白身魚|生鮭|えび|あさり|シーフード/;
+      const qty=(name,role)=>{
+        const rules=[
+          [/鶏|豚|牛|ひき肉|合いびき/,role==='main'?'250g':'150g'],[/白身魚|生鮭|鮭|さば/,'2切れ'],[/えび/,'160g'],[/あさり/,'200g'],[/シーフード/,'180g'],
+          [/卵/,'3個'],[/米$|もち米/,'1合'],[/ご飯/,'400g'],[/スパゲッティ|米麺|中華麺|うどん|ショートパスタ/,'200g'],[/春雨/,'100g'],
+          [/豆|ひよこ豆|レンズ豆|ミックスビーンズ/,'200g'],[/豆腐|厚揚げ/,'300g'],[/牛乳|ヨーグルト|生クリーム|ココナッツミルク|ぶどうジュース/,'300ml'],
+          [/トマト/,'2個'],[/玉ねぎ/,'1個'],[/じゃがいも/,'2個'],[/なす/,'2本'],[/キャベツ|白菜|ほうれん草|小松菜/,'200g'],[/きゅうり|ズッキーニ|にんじん|大根|ピーマン|パプリカ/,'1本'],
+          [/薄力粉|強力粉|米粉|白玉粉/,'150g'],[/トルティーヤ|ライスペーパー|パイシート|春巻きの皮|食パン|バゲット/,'4枚'],[/チーズ|モッツァレラ/,'100g'],
+          [/マンゴー|りんご|オレンジ|アボカド|レモン|ライム/,'2個'],[/練乳/,'200g'],[/寒天|抹茶|シナモン|ココア/,'小さじ2'],[/はちみつ|黒砂糖/,'大さじ2']
+        ];
+        for(const [re,q] of rules)if(re.test(name))return q;
+        return role==='main'?'200g':'150g';
+      };
+      const variants={
+        '主食':[
+          d=>[`${d.main}と${d.sub}を食べやすく切る。米を使う場合は洗って30分浸水する。`,`鍋またはフライパンで${d.main}を中火で4分加熱し、${d.sub}を加えて2分炒める。`,`主食材と水分を加え、料理に適した方法で弱火または炊飯器により加熱する。`,`火を止めて5〜10分蒸らし、${d.season}で味を整える。`],
+          d=>[`${d.main}と${d.sub}を同じ大きさにそろえ、調味料を混ぜる。`,`油を中火で熱し、火の通りにくい材料から4〜6分炒める。`,`ご飯または穀類を加え、強めの中火で2分ほぐしながら混ぜる。`,`${d.season}を加え、汁気が残らないよう1分仕上げる。`]
+        ],
+        '主菜':[
+          d=>[`${d.main}と${d.sub}を一口大にそろえ、表面の水分を拭く。`,`フライパンを中火で1分予熱し、${d.main}を重ならないよう並べて3〜5分加熱する。`,`裏返して${d.sub}を加え、ふたをして弱めの中火で5〜8分加熱する。`,`${d.season}を加えて1分なじませ、中心まで火が通ったことを確認する。`],
+          d=>[`${d.main}と${d.sub}を料理に合う大きさへ切り、調味料を計量する。`,`鍋に油を中火で熱し、${d.main}の表面に焼き色が付くまで4分加熱する。`,`水分と${d.sub}を加え、沸騰したら弱火で10〜15分煮る。`,`煮汁の濃さを調整し、${d.season}で味を整える。`]
+        ],
+        '副菜':[
+          d=>[`${d.main}と${d.sub}を薄切りまたは細切りにする。`,`火の通りにくい材料から、沸騰した湯または中火のフライパンで3〜5分加熱する。`,`水気をよく切り、${d.season}を基調にした調味料で和える。`,`10分置いて味をなじませ、食感を確認して盛り付ける。`],
+          d=>[`${d.main}と${d.sub}を同じ大きさにそろえる。`,`フライパンへ油を入れ、中火で材料を4〜6分炒める。`,`${d.season}を加え、強めの中火で30秒混ぜる。`,`汁気を切るか軽く煮詰め、温かいまま盛り付ける。`]
+        ],
+        'スープ':[
+          d=>[`${d.main}と${d.sub}を1〜2cm角に切る。`,`鍋に油を中火で熱し、香味野菜と${d.main}を3分炒める。`,`水600mlを加え、沸騰したらあくを取り、弱火で15分煮る。`,`材料がやわらかくなったら${d.season}で味を整え、中火で1分温める。`],
+          d=>[`${d.main}と${d.sub}を火が均一に通る大きさに切る。`,`鍋へ水600mlと${d.main}を入れ、中火で沸騰させる。`,`弱火にして${d.sub}を加え、ふたを少しずらして12〜18分煮る。`,`濃度を調整し、${d.season}で仕上げる。`]
+        ],
+        'パン・麺':[
+          d=>[`${d.main}と${d.sub}を準備し、麺または生地は表示どおり下ごしらえする。`,`フライパンで具を中火で4〜6分加熱する。`,`麺または生地と具を合わせ、${d.season}を加える。`,`強めの中火または指定温度のオーブンで仕上げ、中心の状態を確認する。`],
+          d=>[`${d.main}と${d.sub}を計量し、生地または麺の水分を調整する。`,`具材を中火で加熱し、余分な水分を飛ばす。`,`具を包むか麺へ絡め、形を整える。`,`焼く場合は表面に色が付くまで、ゆでる場合は中心まで火が通るまで加熱する。`]
+        ],
+        'デザート':[
+          d=>[`${d.main}と${d.sub}を計量し、型または耐熱容器を準備する。`,`材料を順に混ぜ、泡立てすぎないよう均一にする。`,`弱火の鍋または予熱したオーブンで、料理に適した状態まで加熱する。`,`粗熱を速やかに取り、必要に応じて冷蔵庫で冷やす。`],
+          d=>[`${d.main}と${d.sub}を計量し、粉類があればふるう。`,`液体材料と固体材料を分けて混ぜてから、さっくり合わせる。`,`型へ入れ、表面と中心の固まり具合を確認しながら加熱する。`,`粗熱が取れたら密閉し、食べる直前まで冷蔵する。`]
+        ]
+      };
+      const seenTitles=new Set();
+      recipes.forEach((r,i)=>{
+        if(!String(r.id).startsWith('extra-'))return;
+        const family=r.validation.curatedFamily,variant=r.validation.variant||0;
+        const d={main:r.materials[0],sub:r.materials[1],season:r.ingredients[2].replace(/\s適量$/,'')};
+        r.ingredients=[`${d.main} ${qty(d.main,'main')}`,`${d.sub} ${qty(d.sub,'sub')}`,`${d.season} 適量`];
+        r.steps=variants[r.category][variant%variants[r.category].length](d);
+        r.steps[0]=`${family}を作るため、`+r.steps[0];
+        if(!r.steps.some(x=>/\d+(?:〜\d+)?分|30秒/.test(x)))r.steps.splice(-1,0,`目安として${Math.max(5,Math.round(r.time/3))}分加熱または冷却し、状態を確認する。`);
+        if(!r.steps.some(x=>/中火|弱火|強めの中火|オーブン/.test(x)))r.steps.splice(-1,0,'加熱が必要な場合は弱火を基本とし、焦げないよう状態を確認する。');
+        const all=[r.title,...r.ingredients].join(' ');
+        if(animal.test(all))r.steps.push('食品用温度計を最も厚い部分へ刺し、中心部75℃で1分以上を確認する。');
+        else r.steps.push('最も火が通りにくい材料の中心まで十分熱くなり、料理に適した食感になったことを確認する。');
+        if(rawAnimal.test(all))r.steps.unshift('調理前後に手を洗い、生の肉・魚介に使った包丁とまな板は他の食材へ使う前によく洗う。');
+        r.storage='残す場合は清潔な浅い容器へ小分けして速やかに粗熱を取り、密閉して冷蔵または冷凍する。なるべく早く食べ切り、再加熱は中心まで十分に行う。';
+        if(seenTitles.has(r.title))r.title=`${r.genre}の${r.title}`;
+        seenTitles.add(r.title);
+        r.validation={...r.validation,postRebuildAudit:true,ingredientQuantity:true,procedureSpecific:true,safetyChecked:true,reviewed:'2026-10-09'};
+      });
+    }
+    auditWorldRecipesAfterRebuild();
+    /* J03.11 | PREMIUM DESSERT COLLECTION (v3.22) */
+    function expandDessertCollection(){
+      const premium=[["濃厚ガトーショコラ","焼き菓子","フランス料理","チョコレート","卵","焼"],["ベイクドチーズケーキ","ケーキ","洋菓子","クリームチーズ","ビスケット","焼"],["レアチーズケーキ","冷たい","洋菓子","クリームチーズ","ヨーグルト","冷"],["紅玉アップルパイ","パイ","アメリカ料理","りんご","パイシート","焼"],["レモンタルト","タルト","フランス料理","レモン","薄力粉","焼"],["いちごのショートケーキ","ケーキ","日本の洋菓子","いちご","生クリーム","苺"],["抹茶ティラミス","冷たい","創作デザート","抹茶","マスカルポーネ","茶"],["クラシックティラミス","冷たい","イタリア料理","マスカルポーネ","コーヒー","冷"],["マンゴープリン","プリン","アジアデザート","マンゴー","牛乳","果"],["黒ごまプリン","プリン","和風デザート","黒ごま","牛乳","胡"],["ほうじ茶パンナコッタ","冷たい","創作デザート","ほうじ茶","生クリーム","茶"],["コーヒーゼリー","ゼリー","喫茶デザート","コーヒー","寒天","涼"],["白玉あんみつ","和菓子","日本料理","白玉粉","あんこ","和"],["みたらし団子","和菓子","日本料理","白玉粉","しょうゆ","和"],["どら焼き","和菓子","日本料理","薄力粉","あんこ","和"],["大学いも","和菓子","日本料理","さつまいも","黒ごま","芋"],["スイートポテト","焼き菓子","洋菓子","さつまいも","バター","芋"],["バナナマフィン","焼き菓子","洋菓子","バナナ","薄力粉","焼"],["オートミールクッキー","焼き菓子","洋菓子","オートミール","レーズン","焼"],["ブラウニー","焼き菓子","アメリカ料理","チョコレート","くるみ","焼"],["フルーツヨーグルトパフェ","パフェ","カフェデザート","ヨーグルト","季節の果物","杯"],["桃のコンポート","フルーツ","フランス料理","桃","レモン","果"],["焼きりんご","フルーツ","ヨーロッパ料理","りんご","シナモン","果"],["きなこ豆乳アイス","アイス","和風デザート","豆乳","きなこ","氷"]];
+      const targets=recipes.filter(r=>String(r.id).startsWith('extra-')&&r.validation?.variant===1).slice(0,premium.length);
+      const quantity=name=>/卵/.test(name)?'3個':/牛乳|豆乳|生クリーム|ヨーグルト|コーヒー/.test(name)?'250ml':/いちご|りんご|桃|バナナ|マンゴー|レモン|さつまいも|季節の果物/.test(name)?'2個':/しょうゆ|抹茶|ほうじ茶|黒ごま|きなこ|シナモン/.test(name)?'大さじ2':'150g';
+      targets.forEach((r,i)=>{const [name,type,origin,main,sub,icon]=premium[i];r.title=name;r.genre='デザート';r.category='デザート';r.badge=type;r.icon=icon;r.time=20+(i%7)*5;r.level=i%5===0?'しっかり':i%3===0?'かんたん':'ふつう';r.budget=140+(i%6)*60;r.kcal=160+(i%7)*55;r.materials=[main,sub];r.ingredients=[`${main} ${quantity(main)}`,`${sub} ${quantity(sub)}`,'砂糖 大さじ2'];r.steps=[`${name}を作るため、${main}と${sub}を計量し、型または器を準備する。`,`材料の温度をそろえ、${main}を中心になめらかになるまで混ぜる。`,type==='冷たい'||type==='プリン'||type==='ゼリー'||type==='パフェ'||type==='アイス'?`弱火で5〜10分加熱するか、料理に適した方法で冷やし固める。`:`予熱したオーブンまたはフライパンで、焦げないよう15〜35分加熱する。`,`中心の固まり具合や焼き色を確認し、粗熱を取ってから仕上げる。`];r.tip=`${origin}を参考にした${type}。甘さは仕上げ前に調整してください。`;r.desc=`${main}と${sub}で作る${name}。${type}の食感と香りを楽しめます。`;r.tags=['デザート',type,origin];r.storage='密閉容器へ入れ、冷蔵が必要なものは速やかに冷蔵する。作ったデザートはなるべく早く食べ切る。';r.validation={...r.validation,curatedFamily:name,variant:0,premiumDessert:true,dessertType:type,reviewed:'2026-10-09'};});
+    }
+    expandDessertCollection();
 
 
   /* ==========================================================================
@@ -992,7 +1122,19 @@
       html+=`<button data-page-nav="next" ${current===total?'disabled':''}>次へ ›</button><div class="pager-status">${current} / ${total}ページ</div>`;
       return html;
     }
-    function renderRank(){let make=(title,key)=>`<h3>${title}</h3>`+[...recipes].sort((a,b)=>b[key]-a[key]).slice(0,5).map((r,i)=>`<div class="rank-row" data-detail="${r.id}" role="button" tabindex="0" aria-label="${r.title}を開く"><span class="rank-no">${i+1}</span><span><b>${r.title}</b><small>${r.time}分 · ${r.genre}</small></span><button class="icon-btn" data-detail="${r.id}">見る</button></div>`).join('');$('#rankViews').innerHTML=make('閲覧ランキング','views');$('#rankSaved').innerHTML=make('保存ランキング','saves');$('#rankCooked').innerHTML=make('作ったランキング','cooked');bindDynamic()}
+    function renderRank(){
+      const score=r=>r.views+(r.saves*3)+(r.cooked*5);
+      const groups=[
+        ['rankViews','総合人気',score,'注目'],
+        ['rankSaved','保存されている',r=>r.saves,'保存'],
+        ['rankCooked','実際に作られた',r=>r.cooked,'作った']
+      ];
+      groups.forEach(([id,title,getValue,label])=>{
+        const ranked=[...recipes].sort((a,b)=>getValue(b)-getValue(a)).slice(0,3);
+        $('#'+id).innerHTML=`<h3>${title}</h3>`+ranked.map((r,i)=>`<div class="rank-row" data-detail="${r.id}" role="button" tabindex="0" aria-label="${r.title}を開く"><span class="rank-no">${i+1}</span><span><b>${r.title}</b><small>${r.time}分 · ${r.genre} · ${label} ${getValue(r).toLocaleString()}</small></span><button class="icon-btn" data-detail="${r.id}" aria-label="${r.title}を見る">見る</button></div>`).join('');
+      });
+      bindDynamic();
+    }
     function renderRecent(){let rows=state.recent.map(id=>recipes.find(r=>r.id===id)).filter(Boolean).slice(0,4);$('#recentGrid').innerHTML=rows.length?rows.map(r=>card(r,true)).join(''):'<div class="card article">まだ閲覧履歴はありません。</div>';$('#recentSummary').textContent=rows.length?`最近見た：${rows[0].title}`:'';bindDynamic()}
 
 
@@ -1086,6 +1228,18 @@
   /* ==========================================================================
      J06.3 | RECIPE DETAIL DIALOG
      ========================================================================== */
+    let activeDessertFilter='すべて';
+    function renderDessertCorner(){
+      const all=recipes.filter(r=>r.genre==='デザート'||r.category==='デザート');
+      const types=['すべて',...new Set(all.map(r=>r.validation?.dessertType||r.badge).filter(Boolean))];
+      const filteredDesserts=activeDessertFilter==='すべて'?all:all.filter(r=>(r.validation?.dessertType||r.badge)===activeDessertFilter);
+      $('#dessertCount').textContent=`全${all.length}種類`;
+      $('#dessertFilters').innerHTML=types.map(x=>`<button type="button" class="dessert-filter ${x===activeDessertFilter?'active':''}" data-dessert-filter="${x}">${x}</button>`).join('');
+      $('#dessertGrid').innerHTML=filteredDesserts.slice(0,12).map(r=>card(r,true)).join('');
+      $$('[data-dessert-filter]').forEach(b=>b.onclick=()=>{activeDessertFilter=b.dataset.dessertFilter;renderDessertCorner()});
+      $('#showAllDesserts').onclick=()=>{$('#genre').value='デザート';state.page=1;renderRecipes();$('#recipes').scrollIntoView({behavior:'smooth'})};
+      bindDynamic();
+    }
     function showDetail(id){
       let r=recipes.find(x=>x.id===id);if(!r)return;
       const g=practicalGuide(r);
@@ -1156,6 +1310,15 @@
     const toTop=$('#toTop');addEventListener('scroll',()=>toTop.classList.toggle('show',scrollY>700),{passive:true});toTop.onclick=()=>scrollTo({top:0,behavior:'smooth'});
     $('#todayDate').textContent=new Intl.DateTimeFormat('ja-JP',{month:'long',day:'numeric',weekday:'short'}).format(new Date());
     if(safeLocalGet('kd-cookie'))$('#cookieBar').classList.add('hidden');$('#cookieAccept').onclick=()=>{safeLocalSet('kd-cookie','accepted');$('#cookieBar').classList.add('hidden')};$('#cookieSettings').onclick=()=>{let d=info.cookies;$('#infoTitle').textContent=d[0];$('#infoBody').textContent=d[1];$('#infoDialog').showModal()};
-  </script>
+  
+    function initializePublicContent(){
+      renderRecipes();
+      renderRank();
+      renderRecent();
+      renderDessertCorner();
+    }
+    if(document.readyState==='loading')window.addEventListener('DOMContentLoaded',initializePublicContent,{once:true});
+    else initializePublicContent();
+</script>
 </body>
 </html>
