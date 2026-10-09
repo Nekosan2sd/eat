@@ -52,7 +52,7 @@
 -->
 
 
-<!-- v3.15 MAINTENANCE MAP
+<!-- v3.18 MAINTENANCE MAP
  D01 Cooking site and responsive public UI
  D02 Hidden authentication and painted 100% loading
  D03 Chat shell and viewport-resize stability
@@ -80,7 +80,7 @@
     main{max-width:1280px;margin:auto;padding:26px 18px 80px}.hero{display:grid;grid-template-columns:1.45fr .75fr;gap:18px}.hero-feature{position:relative;overflow:hidden;min-height:400px;padding:48px;border-radius:26px;color:#fff;background:radial-gradient(circle at 82% 18%,rgba(255,220,150,.36),transparent 25%),linear-gradient(135deg,#713522,#b75a39 58%,#d4945e);box-shadow:var(--shadow)}.hero-feature:after{content:"旬";position:absolute;right:25px;bottom:-70px;color:#ffffff15;font:260px/1 serif}.kicker{display:inline-flex;padding:5px 11px;color:#713522;font-size:12px;font-weight:900;background:#fff4df;border-radius:99px}.hero h2{position:relative;z-index:1;margin:18px 0 12px;font-family:"Yu Mincho",serif;font-size:clamp(31px,4.5vw,59px);line-height:1.35}.hero-feature p{position:relative;z-index:1;max-width:670px}.hero-actions{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:45px;border:0;padding:10px 17px;color:#fff;font-weight:900;text-decoration:none;background:var(--red);border-radius:10px}.btn.light{color:#60301f;background:#fff}.btn.ghost{color:var(--red);background:#f5e6dc}.side-stack{display:grid;gap:14px}.mini-feature{padding:22px;border:1px solid var(--line);border-radius:20px;background:var(--paper);box-shadow:var(--shadow)}.mini-feature strong{display:block;margin:7px 0;font:700 22px "Yu Mincho",serif}.mini-feature small{color:var(--muted)}.season-list{margin:11px 0 0;padding-left:1.2em}.season-list li{margin:4px 0}
     .trustbar{display:grid;grid-template-columns:repeat(4,1fr);margin:22px 0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--line)}.trust{padding:16px;text-align:center;background:var(--paper)}.trust b{display:block;color:var(--red);font-size:22px}.trust small{color:var(--muted)}
     section{margin:44px 0;scroll-margin-top:75px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:17px}.section-title{margin:0;font:700 clamp(24px,3vw,35px) "Yu Mincho",serif}.section-title span{display:block;margin-bottom:4px;color:var(--red);font:900 11px sans-serif;letter-spacing:.16em}.section-head p{margin:0;color:var(--muted);font-size:13px}.grid{display:grid;gap:16px}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.card{border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);box-shadow:var(--shadow)}
-    .quick-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.quick{padding:17px 9px;text-align:center}.quick i{display:grid;width:43px;height:43px;margin:0 auto 8px;place-items:center;color:#fff;font-style:normal;font-weight:900;background:var(--green);border-radius:50%}.quick b{display:block}.quick small{color:var(--muted)}
+    .quick-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:10px}.quick{padding:17px 9px;text-align:center}.quick i{display:grid;width:43px;height:43px;margin:0 auto 8px;place-items:center;color:#fff;font-style:normal;font-weight:900;background:var(--green);border-radius:50%}.quick b{display:block}.quick small{color:var(--muted)}
     .rank-list{padding:8px 20px}.rank-row{display:grid;grid-template-columns:42px 1fr auto;gap:12px;align-items:center;padding:14px 0;border-bottom:1px dashed var(--line)}.rank-row:last-child{border:0}.rank-no{display:grid;width:34px;height:34px;place-items:center;color:#fff;font-weight:900;background:var(--red);border-radius:50%}.rank-row:first-child .rank-no{background:var(--gold)}.rank-row small{color:var(--muted)}
     .filter-panel{padding:22px}.search-row{display:grid;grid-template-columns:2fr repeat(3,1fr) auto;gap:10px}.field{width:100%;border:1px solid #cdbdaf;padding:11px 12px;background:#fff;border-radius:10px}.filter-more{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:15px}.check-wrap{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.check-chip{border:1px solid var(--line);padding:7px 10px;background:#fff;border-radius:99px}.check-chip input{accent-color:var(--red)}.resultbar{display:flex;justify-content:space-between;align-items:center;margin:17px 0;color:var(--muted)}
     .recipe-card{overflow:hidden}.recipe-art{position:relative;height:120px;background:linear-gradient(135deg,var(--art1,#91472f),var(--art2,#d9a46e))}.recipe-art:before{content:attr(data-icon);position:absolute;inset:0;display:grid;place-items:center;color:#ffffffd9;font:58px serif}.recipe-art .badge{position:absolute;left:12px;top:12px;padding:4px 8px;color:#63301e;font-size:11px;font-weight:900;background:#fff4df;border-radius:99px}.recipe-body{padding:18px}.recipe-body h3{margin:0 0 6px;font-size:20px}.meta{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0}.meta span{padding:3px 8px;color:var(--green);font-size:11px;font-weight:900;background:#eaf2eb;border-radius:99px}.recipe-desc{min-height:3.4em;color:var(--muted);font-size:13px}.recipe-foot{display:flex;justify-content:space-between;align-items:center;gap:7px;margin-top:15px}.stats{color:var(--muted);font-size:11px}.icon-btn{border:1px solid var(--line);padding:7px 10px;color:var(--red);background:#fff;border-radius:9px}.icon-btn.active{color:#fff;background:var(--red)}
@@ -283,7 +283,7 @@
     body.chat-shell-open #chatShell{display:block!important;opacity:1!important;visibility:visible!important}
     body.chat-shell-open #chatFrame{opacity:1!important;transform:scale(1)!important}
 
-    /* C05.2 | v3.15 RESIZE-PROOF CHAT SHELL */
+    /* C05.2 | v3.18 RESIZE-PROOF CHAT SHELL */
     body.chat-shell-open{overflow:hidden!important}
     body.chat-shell-open #chatShell{display:block!important;position:fixed!important;inset:0!important;width:100dvw!important;height:100dvh!important;opacity:1!important;visibility:visible!important;z-index:99999!important}
     body.chat-shell-open #chatFrame{display:block!important;width:100%!important;height:100%!important;opacity:1!important;visibility:visible!important}
@@ -328,6 +328,43 @@
       .serving-control button{width:44px;min-width:44px}.serving-input{padding-inline:4px}
     }
 
+
+    /* C04.10 | PHONE-FIRST HARDENING (v3.18) */
+    html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:72px}
+    body{min-width:0;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+    input,select,textarea{font-size:16px}
+    button,.btn,.icon-btn,.quick,.nav a{touch-action:manipulation}
+    @media (max-width:600px){
+      :root{--mobile-pad:12px}
+      body{padding-bottom:calc(74px + env(safe-area-inset-bottom));font-size:15px;line-height:1.65}
+      .wrap{width:100%;padding-inline:var(--mobile-pad)}
+      header{position:sticky;top:0;z-index:60;background:#fffdf9eb;backdrop-filter:blur(12px)}
+      .topbar{min-height:62px;padding-block:8px;flex-wrap:nowrap}.brand{flex:1}.brand-sub{display:none}
+      .nav-toggle{display:grid;width:46px;height:46px;place-items:center;flex:0 0 46px}
+      .nav{position:fixed;left:0;right:0;top:62px;z-index:59;display:none;max-height:calc(100dvh - 62px);overflow:auto;padding:10px 12px calc(18px + env(safe-area-inset-bottom));background:#fffdf9;border-top:1px solid var(--line);box-shadow:0 18px 35px #0002}
+      .nav.open{display:grid;grid-template-columns:1fr 1fr;gap:8px}.nav a{display:grid;min-height:48px;place-items:center;padding:10px;border:1px solid var(--line);border-radius:12px;background:#fff}
+      .hero{padding:18px 0}.hero-grid{gap:14px}.hero-copy h1{font-size:clamp(27px,9vw,38px);line-height:1.16}.hero-copy p{font-size:14px}
+      .trust-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.trust{min-width:0;padding:10px}.trust b{font-size:19px}
+      .search-panel{padding:12px;border-radius:16px}.search-grid{display:grid;grid-template-columns:1fr;gap:10px}.field,select{width:100%;min-height:48px}
+      .filter-row,.material-row{gap:7px;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:none;padding-bottom:4px}.filter-row::-webkit-scrollbar,.material-row::-webkit-scrollbar{display:none}.chip{flex:0 0 auto;min-height:42px}
+      .quick-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.quick{min-height:100px;padding:12px 8px}.quick i{font-size:24px}
+      .content-layout{display:block}.side{display:none}.resultbar{gap:8px}.resultbar h2{font-size:22px}.result-actions{display:grid;grid-template-columns:1fr 1fr;width:100%}.result-actions select,.result-actions button{min-width:0;width:100%;min-height:46px}
+      .recipe-grid{display:grid;grid-template-columns:1fr;gap:14px}.recipe-card{border-radius:18px}.recipe-art{min-height:150px}.recipe-title{font-size:22px;line-height:1.28}.recipe-body{padding:15px}.recipe-desc{font-size:14px}.meta-row{gap:6px}.meta{font-size:12px;padding:6px 9px}.recipe-foot{gap:8px;align-items:center}.recipe-foot .icon-btn{width:46px;height:46px;flex:0 0 46px}.recipe-link{min-height:46px;display:flex;align-items:center}
+      .pager{position:sticky;bottom:calc(8px + env(safe-area-inset-bottom));z-index:35;margin:18px auto 0;padding:7px;border:1px solid var(--line);border-radius:16px;background:#fffdf9e8;backdrop-filter:blur(10px);box-shadow:0 8px 24px #0002;overflow-x:auto;justify-content:flex-start}.pager button{flex:0 0 auto;min-width:44px;height:44px}
+      dialog{margin:auto}.modal-head h2{font-size:21px;line-height:1.3}.modal-head{gap:8px}.close-x{min-width:46px;min-height:46px}.recipe-practical{margin-inline:-4px}.detail-actions{display:grid;grid-template-columns:1fr}.detail-actions button{width:100%;min-height:48px}.step-card{padding:13px}.ingredient-check{min-height:48px;padding:10px 6px}.ingredient-check input{width:22px;height:22px}
+      .serving-control{padding:10px}.serving-input-wrap{grid-template-columns:48px minmax(64px,1fr) auto 48px}.serving-input{height:48px;font-size:20px}.serving-control button{height:48px}
+      .cookie{left:8px;right:8px;bottom:calc(8px + env(safe-area-inset-bottom));width:auto;padding:12px}.cookie-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.cookie-actions button{min-height:46px}
+      #toTop{width:50px;height:50px;bottom:calc(16px + env(safe-area-inset-bottom))}.site-version{bottom:calc(6px + env(safe-area-inset-bottom))}
+      footer .footer-grid{grid-template-columns:1fr;gap:18px}
+    }
+    @media (max-width:390px){
+      .nav.open{grid-template-columns:1fr}.quick-grid{grid-template-columns:1fr 1fr}.trust-row{grid-template-columns:1fr 1fr}
+      .recipe-foot{flex-wrap:wrap}.recipe-foot .recipe-link{flex:1}.result-actions{grid-template-columns:1fr}
+    }
+    @media (orientation:landscape) and (max-height:500px) and (max-width:950px){
+      header{position:static}.nav{top:0;max-height:100dvh}.hero{padding:12px 0}.hero-copy h1{font-size:28px}dialog>.modal,dialog.recipe-dialog>.modal{max-height:96dvh}
+    }
+
 </style>
 </head>
 <body>
@@ -340,9 +377,9 @@
   <main id="top">
     <div class="hero" id="feature"><article class="hero-feature"><span class="kicker">季節の食卓 · 秋号</span><h2>湯気までごちそう。<br>秋を味わう、あったか献立。</h2><p>きのこ、根菜、秋鮭。身近な旬の食材で作れる、忙しい日にもやさしい家庭料理を編集部が選びました。</p><div class="hero-actions"><a class="btn light" href="#recipes" data-preset="秋">特集レシピを見る</a><button class="btn" id="randomRecipe" type="button">今日の献立を決める</button></div></article><aside class="side-stack"><div class="mini-feature"><span class="kicker">本日の一汁三菜</span><strong>鶏ときのこの炊き込みご飯</strong><small>調理時間45分・1人分 約520kcal</small><ul class="season-list"><li>かぼちゃの含め煮</li><li>小松菜のごま和え</li><li>豆腐とねぎのみそ汁</li></ul></div><div class="mini-feature"><span class="kicker">編集部メモ</span><strong>週末90分で、平日5日分の副菜</strong><small>冷蔵・冷凍の目安と、味を落とさない保存方法を紹介。</small></div></aside></div>
     <div class="trustbar"><div class="trust"><b>500</b><small>掲載レシピ</small></div><div class="trust"><b>186</b><small>15分以内</small></div><div class="trust"><b id="favTotal">0</b><small>あなたのお気に入り</small></div><div class="trust"><b>毎週金曜</b><small>特集更新</small></div></div>
-    <section><div class="section-head"><h2 class="section-title"><span>FIND BY PURPOSE</span>目的から探す</h2><p>今の気分や生活に合うレシピへ</p></div><div class="quick-grid"><button class="card quick" data-preset="時短"><i>15</i><b>時短</b><small>15分以内</small></button><button class="card quick" data-preset="節約"><i>￥</i><b>節約</b><small>300円台</small></button><button class="card quick" data-preset="作り置き"><i>保</i><b>作り置き</b><small>平日を楽に</small></button><button class="card quick" data-preset="お弁当"><i>弁</i><b>お弁当</b><small>冷めてもおいしい</small></button><button class="card quick" data-preset="一人暮らし"><i>1</i><b>一人暮らし</b><small>材料少なめ</small></button><button class="card quick" data-preset="野菜"><i>菜</i><b>野菜中心</b><small>副菜・汁物</small></button></div></section>
+    <section><div class="section-head"><h2 class="section-title"><span>FIND BY PURPOSE</span>目的から探す</h2><p>今の気分や生活に合うレシピへ</p></div><div class="quick-grid"><button class="card quick" data-preset="時短"><i>15</i><b>時短</b><small>15分以内</small></button><button class="card quick" data-preset="節約"><i>￥</i><b>節約</b><small>300円台</small></button><button class="card quick" data-preset="作り置き"><i>保</i><b>作り置き</b><small>平日を楽に</small></button><button class="card quick" data-preset="お弁当"><i>弁</i><b>お弁当</b><small>冷めてもおいしい</small></button><button class="card quick" data-preset="一人暮らし"><i>1</i><b>一人暮らし</b><small>材料少なめ</small></button><button class="card quick" data-preset="野菜"><i>菜</i><b>野菜中心</b><small>副菜・汁物</small></button><button class="card quick" data-preset="デザート"><i>甘</i><b>デザート</b><small>お菓子・甘味</small></button></div></section>
     <section id="ranking"><div class="section-head"><h2 class="section-title"><span>WEEKLY RANKING</span>今週の人気レシピ</h2><p>閲覧数と「作った」をもとに集計</p></div><div class="grid g3"><div class="card rank-list" id="rankViews"></div><div class="card rank-list" id="rankSaved"></div><div class="card rank-list" id="rankCooked"></div></div></section>
-    <section id="recipes"><div class="section-head"><h2 class="section-title"><span>RECIPE SEARCH</span>レシピを探す</h2><p>食材・時間・予算・難易度で絞り込み</p></div><div class="card filter-panel" id="filterPanel"><button class="btn ghost mobile-filter-toggle" id="filterToggle" type="button" aria-expanded="true" aria-controls="filterExtras">絞り込みを閉じる</button><div class="search-row"><input class="field" id="q" aria-label="料理名、食材、キーワードで検索" type="search" placeholder="料理名・食材・キーワード"><select class="field" id="category" aria-label="料理区分"><option value="">料理区分すべて</option><option>主食</option><option>主菜</option><option>副菜</option><option>汁物</option></select><select class="field" id="time" aria-label="調理時間"><option value="99">時間指定なし</option><option value="15">15分以内</option><option value="30">30分以内</option><option value="60">60分以内</option></select><select class="field" id="sort" aria-label="並び順"><option value="popular">人気順</option><option value="new">新着順</option><option value="short">短時間順</option><option value="budget">低予算順</option></select><button class="btn ghost" id="reset" type="button">条件クリア</button></div><div id="filterExtras"><div class="filter-more"><select class="field" id="genre" aria-label="料理ジャンル"><option value="">ジャンルすべて</option><option>和食</option><option>洋食</option><option>中華</option><option>韓国料理</option><option>イタリア料理</option><option>フランス料理</option><option>インド料理</option><option>東南アジア</option><option>地中海料理</option><option>メキシコ料理</option><option>スペイン料理</option><option>北アフリカ料理</option><option>アメリカ料理</option><option>多国籍料理</option><option>創作料理</option><option>カフェ料理</option><option>鍋料理</option><option>屋台料理</option><option>アジア料理</option><option>欧州料理</option><option>トルコ料理</option></select><select class="field" id="budget" aria-label="1人分の予算"><option value="9999">予算指定なし</option><option value="300">1人300円以内</option><option value="500">1人500円以内</option><option value="800">1人800円以内</option></select><select class="field" id="level" aria-label="難易度"><option value="">難易度すべて</option><option>かんたん</option><option>ふつう</option><option>じっくり</option></select><input class="field" id="exclude" aria-label="除外する食材" placeholder="除外食材 例：卵"></div><div class="check-wrap" id="materials"></div></div></div><div class="resultbar" aria-label="検索結果"><strong id="resultCount" aria-live="polite"></strong><div class="result-actions"><span class="filter-summary" id="filterSummary"></span><span id="recentSummary"></span></div></div><div class="grid g3" id="recipeGrid"></div><div class="pager" id="pager"></div></section>
+    <section id="recipes"><div class="section-head"><h2 class="section-title"><span>RECIPE SEARCH</span>レシピを探す</h2><p>食材・時間・予算・難易度で絞り込み</p></div><div class="card filter-panel" id="filterPanel"><button class="btn ghost mobile-filter-toggle" id="filterToggle" type="button" aria-expanded="true" aria-controls="filterExtras">絞り込みを閉じる</button><div class="search-row"><input class="field" id="q" aria-label="料理名、食材、キーワードで検索" type="search" placeholder="料理名・食材・キーワード"><select class="field" id="category" aria-label="料理区分"><option value="">料理区分すべて</option><option>主食</option><option>主菜</option><option>副菜</option><option>汁物</option><option>デザート</option></select><select class="field" id="time" aria-label="調理時間"><option value="99">時間指定なし</option><option value="15">15分以内</option><option value="30">30分以内</option><option value="60">60分以内</option></select><select class="field" id="sort" aria-label="並び順"><option value="popular">人気順</option><option value="new">新着順</option><option value="short">短時間順</option><option value="budget">低予算順</option></select><button class="btn ghost" id="reset" type="button">条件クリア</button></div><div id="filterExtras"><div class="filter-more"><select class="field" id="genre" aria-label="料理ジャンル"><option value="">ジャンルすべて</option><option>和食</option><option>洋食</option><option>中華</option><option>韓国料理</option><option>イタリア料理</option><option>フランス料理</option><option>インド料理</option><option>東南アジア</option><option>地中海料理</option><option>メキシコ料理</option><option>スペイン料理</option><option>北アフリカ料理</option><option>アメリカ料理</option><option>多国籍料理</option><option>創作料理</option><option>カフェ料理</option><option>鍋料理</option><option>屋台料理</option><option>アジア料理</option><option>欧州料理</option><option>トルコ料理</option><option>デザート</option></select><select class="field" id="budget" aria-label="1人分の予算"><option value="9999">予算指定なし</option><option value="300">1人300円以内</option><option value="500">1人500円以内</option><option value="800">1人800円以内</option></select><select class="field" id="level" aria-label="難易度"><option value="">難易度すべて</option><option>かんたん</option><option>ふつう</option><option>じっくり</option></select><input class="field" id="exclude" aria-label="除外する食材" placeholder="除外食材 例：卵"></div><div class="check-wrap" id="materials"></div></div></div><div class="resultbar" aria-label="検索結果"><strong id="resultCount" aria-live="polite"></strong><div class="result-actions"><span class="filter-summary" id="filterSummary"></span><span id="recentSummary"></span></div></div><div class="grid g3" id="recipeGrid"></div><div class="pager" id="pager"></div></section>
     <section id="recentSection"><div class="section-head"><h2 class="section-title"><span>YOUR HISTORY</span>最近見たレシピ</h2><button class="icon-btn" id="clearRecent" type="button">履歴を消す</button></div><div class="grid g4" id="recentGrid"></div></section>
     <section id="columns"><div class="section-head"><h2 class="section-title"><span>KITCHEN JOURNAL</span>料理の基本と読みもの</h2><p>毎日の「なぜ？」を編集部が解説</p></div><div class="grid g3"><article class="card article"><span class="eyebrow">料理の基本</span><h3>煮物に味が入るのは、火を止めてから。</h3><p>冷める過程で煮汁が食材へ移動する仕組みと、作り置きで安全に冷ます手順。</p><time>2026.09.18</time></article><article class="card article"><span class="eyebrow">台所道具</span><h3>フライパンひとつで、洗い物を減らす順番。</h3><p>香りの弱い食材から順に火を入れ、調味料を先に合わせる段取りを紹介。</p><time>2026.09.12</time></article><article class="card article"><span class="eyebrow">保存の知恵</span><h3>冷凍ご飯をおいしく戻す、小分けの厚み。</h3><p>粗熱の取り方、包み方、加熱ムラを抑える形を家庭向けに整理しました。</p><time>2026.09.05</time></article></div></section>
     <section id="notices"><div class="section-head"><h2 class="section-title"><span>INFORMATION</span>編集部からのお知らせ</h2></div><div class="card notice-list"><div class="notice-row"><time>2026.09.25</time><span class="notice-tag">更新情報</span><span>秋のあったか献立特集を公開しました。</span></div><div class="notice-row"><time>2026.09.18</time><span class="notice-tag">レシピ</span><span>15分以内で作れる副菜を12品追加しました。</span></div><div class="notice-row"><time>2026.09.01</time><span class="notice-tag">お知らせ</span><span>サイト内検索とお気に入り機能を改善しました。</span></div></div></section>
@@ -354,7 +391,7 @@
   <!-- H04 | DIALOGS AND UTILITY OVERLAYS -->
   <dialog id="detailDialog" class="recipe-dialog"><div class="modal" id="detailBody"></div><div class="dialog-close-hint">外側をタップすると閉じます</div></dialog><dialog id="infoDialog"><div class="modal"><div class="modal-head"><h2 id="infoTitle"></h2><button class="close-x" type="button" data-close aria-label="閉じる">×</button></div><div class="legal" id="infoBody"></div></div></dialog><dialog id="postDialog"><div class="modal"><div class="modal-head"><h2>レシピを投稿</h2><button class="close-x" type="button" data-close aria-label="閉じる">×</button></div><form id="postForm"><label>料理名<input class="field" id="postTitle" required maxlength="40"></label><label>材料<textarea class="field" id="postIngredients" required rows="4" placeholder="1行に1つずつ入力"></textarea></label><label>作り方<textarea class="field" id="postSteps" required rows="5" placeholder="1行に1手順ずつ入力"></textarea></label><button class="btn">端末内に保存</button><p id="postMessage"></p></form></div></dialog><dialog id="gate"><div class="modal"><div class="modal-head"><h2>認証</h2><button class="close-x" type="button" data-close aria-label="閉じる">×</button></div><p>4桁の認証コードを入力してください。</p><form id="gateForm"><input class="field" id="pw" type="password" required inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="current-password"><p id="gateError" style="color:#b42318"></p><button class="btn">続ける</button></form></div></dialog>
   <div id="cookieBar"><span>台所日和では、設定保存と利用状況の把握にブラウザ保存・アクセス解析を利用します。</span><div class="cookie-actions"><button class="btn ghost" id="cookieSettings">設定</button><button class="btn" id="cookieAccept">同意する</button></div></div>
-    <div class="site-version" aria-label="サイトバージョン">v3.15</div>
+    <div class="site-version" aria-label="サイトバージョン">v3.18</div>
     <button id="toTop" type="button" aria-label="ページ上部へ戻る">↑</button>
 
 <script>
@@ -867,6 +904,21 @@
       });
     }
     secondPassRecipeAudit();
+    /* J03.8 | DESSERT GENRE CLASSIFICATION (v3.16) */
+    function classifyDessertRecipes(){
+      const dessertIds=new Set(['banana-cake','pudding','apple-compote']);
+      const dessertPattern=/ケーキ|プリン|コンポート|ゼリー|クッキー|タルト|アイス|シャーベット|ムース|ブラウニー|スコーン|ドーナツ|パンナコッタ|ティラミス|バクラヴァ|ストラッチ/;
+      recipes.forEach(r=>{
+        if(dessertIds.has(r.id)||dessertPattern.test(r.title)){
+          r.genre='デザート';
+          r.category='デザート';
+          r.tags=[...new Set([...r.tags,'デザート','おやつ'])];
+          if(!/甘|菓|果/.test(r.icon))r.icon='甘';
+          r.validation={...r.validation,dessertClassified:true,reviewed:'2026-10-09'};
+        }
+      });
+    }
+    classifyDessertRecipes();
 
 
   /* ==========================================================================
@@ -878,7 +930,7 @@
     function safeJsonRead(key,fallback){try{const value=JSON.parse(safeLocalGet(key,'null'));return value===null?fallback:value}catch(error){console.warn('[台所日和] 保存JSONが壊れています',key,error);return fallback}}
     const favoriteData=safeJsonRead('kd-favorites',[]),cookedData=safeJsonRead('kd-cooked',[]),recentData=safeJsonRead('kd-recent',[]);
     const state={page:1,perPage:6,favorites:new Set(Array.isArray(favoriteData)?favoriteData:[]),cooked:new Set(Array.isArray(cookedData)?cookedData:[]),recent:Array.isArray(recentData)?recentData:[]};
-    const materialOptions=['鶏肉','豚肉','卵','玉ねぎ','じゃがいも','きのこ','鮭','豆腐','野菜'];
+    const materialOptions=['鶏肉','豚肉','卵','玉ねぎ','じゃがいも','きのこ','鮭','豆腐','野菜','果物'];
     const yen=n=>'¥'+n.toLocaleString();
     function saveSets(){safeLocalSet('kd-favorites',JSON.stringify([...state.favorites]));safeLocalSet('kd-cooked',JSON.stringify([...state.cooked]));$('#favTotal').textContent=state.favorites.size}
 
@@ -887,7 +939,39 @@
      J05 | SEARCH, CARDS AND PAGINATION
      ========================================================================== */
     function card(r,compact=false){return `<article class="card recipe-card" data-detail="${r.id}" role="button" tabindex="0" aria-label="${r.title}のレシピを開く"><div class="recipe-art" data-icon="${r.icon}" style="--art1:${r.art[0]};--art2:${r.art[1]}"><span class="badge">${r.badge}</span></div><div class="recipe-body"><h3>${r.title}</h3><div class="meta"><span>${r.time}分</span><span>${yen(r.budget)}/人</span><span>${r.level}</span></div>${compact?'':`<p class="recipe-desc">${r.desc}</p>`}<div class="recipe-foot"><span class="stats">閲覧 ${r.views.toLocaleString()} · 保存 ${r.saves.toLocaleString()}</span><span><button class="icon-btn ${state.favorites.has(r.id)?'active':''}" data-fav="${r.id}" aria-label="${r.title}のお気に入りを切り替える" aria-pressed="${state.favorites.has(r.id)}">♡</button> <span class="card-open-hint">レシピを見る</span></span></div></div></article>`}
-    function filtered(){let arr=[...recipes],q=$('#q').value.trim().toLowerCase(),cat=$('#category').value,tm=+$('#time').value,genre=$('#genre').value,budget=+$('#budget').value,level=$('#level').value,exclude=$('#exclude').value.trim(),mats=$$('#materials input:checked').map(x=>x.value);arr=arr.filter(r=>{let hay=[r.title,r.desc,...r.tags,...r.materials].join(' ').toLowerCase();return(!q||hay.includes(q))&&(!cat||r.category===cat)&&r.time<=tm&&(!genre||r.genre===genre)&&r.budget<=budget&&(!level||r.level===level)&&(!exclude||!hay.includes(exclude.toLowerCase()))&&mats.every(x=>r.materials.includes(x)||r.tags.includes(x))});let sort=$('#sort').value;if(sort==='new')arr.sort((a,b)=>b.date.localeCompare(a.date));else if(sort==='short')arr.sort((a,b)=>a.time-b.time);else if(sort==='budget')arr.sort((a,b)=>a.budget-b.budget);else arr.sort((a,b)=>b.views-a.views);return arr}
+    /* J05.0 | DUPLICATE CONTROL AND DIVERSITY ORDERING (v3.17) */
+    function recipeStructureKey(r){
+      const ingredients=r.ingredients.map(x=>x.replace(/\d+(?:\.\d+)?|大さじ|小さじ|適量|少々|g|ml|個|本|枚|片|束|袋|缶|丁|合|切れ/g,'').replace(/\s+/g,'').trim()).sort().join('|');
+      const steps=r.steps.map(x=>x.replace(/\d+(?:\.\d+)?/g,'#').replace(/\s+/g,'').trim()).join('|');
+      return `${ingredients}::${steps}`;
+    }
+    function recipeFamilyKey(r){
+      return r.title
+        .replace(/^.+?の/,'')
+        .replace(/・(?:青じそ|黒こしょう|レモン|香味ねぎ|ごま|生姜|ハーブ|柚子こしょう)仕立て$/,'')
+        .replace(/風$/,'') || r.category;
+    }
+    function removeTrueDuplicates(list){
+      const seen=new Set();
+      return list.filter(r=>{
+        const key=recipeStructureKey(r);
+        if(seen.has(key))return false;
+        seen.add(key);return true;
+      });
+    }
+    function diversifyRecipeOrder(list){
+      const queues=new Map();
+      list.forEach(r=>{const key=recipeFamilyKey(r);if(!queues.has(key))queues.set(key,[]);queues.get(key).push(r)});
+      const result=[];
+      while(queues.size){
+        for(const [key,queue] of [...queues]){
+          if(queue.length)result.push(queue.shift());
+          if(!queue.length)queues.delete(key);
+        }
+      }
+      return result;
+    }
+    function filtered(){let arr=[...recipes],q=$('#q').value.trim().toLowerCase(),cat=$('#category').value,tm=+$('#time').value,genre=$('#genre').value,budget=+$('#budget').value,level=$('#level').value,exclude=$('#exclude').value.trim(),mats=$$('#materials input:checked').map(x=>x.value);arr=arr.filter(r=>{let hay=[r.title,r.desc,...r.tags,...r.materials].join(' ').toLowerCase();return(!q||hay.includes(q))&&(!cat||r.category===cat)&&r.time<=tm&&(!genre||r.genre===genre)&&r.budget<=budget&&(!level||r.level===level)&&(!exclude||!hay.includes(exclude.toLowerCase()))&&mats.every(x=>r.materials.includes(x)||r.tags.includes(x))});let sort=$('#sort').value;if(sort==='new')arr.sort((a,b)=>b.date.localeCompare(a.date));else if(sort==='short')arr.sort((a,b)=>a.time-b.time);else if(sort==='budget')arr.sort((a,b)=>a.budget-b.budget);else arr.sort((a,b)=>b.views-a.views);arr=removeTrueDuplicates(arr);if($('#sort').value==='popular'||$('#sort').value==='new')arr=diversifyRecipeOrder(arr);return arr}
     function currentFilterSummary(){
       const parts=[];const q=$('#q').value.trim();if(q)parts.push(`「${q}」`);
       ['category','genre','level'].forEach(id=>{const v=$('#'+id).value;if(v)parts.push(v)});
@@ -897,7 +981,7 @@
       const ex=$('#exclude').value.trim();if(ex)parts.push(`${ex}を除外`);
       return parts.length?parts.join(' / '):'すべて表示';
     }
-    function renderRecipes(){let arr=filtered(),pages=Math.max(1,Math.ceil(arr.length/state.perPage));state.page=Math.min(state.page,pages);let shown=arr.slice((state.page-1)*state.perPage,state.page*state.perPage);$('#resultCount').textContent=`${arr.length}件のレシピ`;$('#filterSummary').textContent=currentFilterSummary();$('#recipeGrid').innerHTML=shown.map(r=>card(r)).join('')||'<div class="card article empty-state"><b>条件に合うレシピがありません</b><p>除外食材や絞り込み条件を減らしてみてください。</p><button class="btn ghost" id="emptyReset">条件をすべて解除</button></div>';$('#pager').innerHTML=renderPager(pages,state.page);bindDynamic()}
+    function renderRecipes(){let arr=filtered(),pages=Math.max(1,Math.ceil(arr.length/state.perPage));state.page=Math.min(state.page,pages);let shown=arr.slice((state.page-1)*state.perPage,state.page*state.perPage);$('#resultCount').textContent=`${arr.length}件のレシピ（重複除外済み）`;$('#filterSummary').textContent=currentFilterSummary();$('#recipeGrid').innerHTML=shown.map(r=>card(r)).join('')||'<div class="card article empty-state"><b>条件に合うレシピがありません</b><p>除外食材や絞り込み条件を減らしてみてください。</p><button class="btn ghost" id="emptyReset">条件をすべて解除</button></div>';$('#pager').innerHTML=renderPager(pages,state.page);bindDynamic()}
     function renderPager(total,current){
       if(total<=1)return '';
       const nums=new Set([1,total,current-2,current-1,current,current+1,current+2]);
